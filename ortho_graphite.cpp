@@ -3,6 +3,7 @@
 #include <string> // For strings
 #include <cmath> // for sine and cosine
 
+const double PI = 3.14159265359;
 
 using namespace std;
 
@@ -31,11 +32,13 @@ out << 8*rows*columns*stacks << "\n\n";
 
 double bl = 1.42;
 
-double x0 = 0.0, x1 = sin(3.14/3)*bl;
+double x0 = 0.0, x1 = sin(PI/3)*bl;
 
-double y0 = 0.0, y1 = cos(3.14/3)*bl, y2 = bl, y3 = cos(3.14/3)*bl + bl, y4 = 2*bl, y5 = cos(3.14/3)*bl + 2*bl ;
+double y0 = 0.0, y1 = cos(PI/3)*bl, y2 = bl, y3 = cos(PI/3)*bl + bl, y4 = 2*bl, y5 = cos(PI/3)*bl + 2*bl ;
 
-double  z0 = -7.70, z1 = -3.35;
+double layer_distance = 3.35;
+
+double  z0 = -2*layer_distance, z1 = -layer_distance;
 
 double x0_values[columns], x1_values[columns];
 
@@ -45,22 +48,22 @@ double z0_values[stacks], z1_values[stacks];
 
 for (int i = 0; i < stacks; i ++)
 {
-	z0 += 7.70;
-	z1 += 7.70;
+	z0 += 2*layer_distance;
+	z1 += 2*layer_distance;
 	z0_values[i] = z0;
 	z1_values[i] = z1;
 
-	x0 = 0.0, x1 = sin(3.14/3)*bl;
+	x0 = 0.0, x1 = sin(PI/3)*bl;
 
 	for (int j = 0; j < columns; j ++)
 	{
-		x0 += sin(3.14/3)*bl*2;
-		x1 += sin(3.14/3)*bl*2;
+		x0 += sin(PI/3)*bl*2;
+		x1 += sin(PI/3)*bl*2;
 		
 		x0_values[j] = x0;
 		x1_values[j] = x1;		
 
-		y0 = 0.0, y1 = cos(3.14/3)*bl, y2 = bl, y3 = cos(3.14/3)*bl + bl, y4 = 2*bl, y5 = cos(3.14/3)*bl + 2*bl;
+		y0 = 0.0, y1 = cos(PI/3)*bl, y2 = bl, y3 = cos(PI/3)*bl + bl, y4 = 2*bl, y5 = cos(PI/3)*bl + 2*bl;
 
 		for (int k = 0; k < rows; k ++)
 		{
@@ -89,6 +92,8 @@ for (int i = 0; i < stacks; i ++)
 		}
 	}
 }
+
+cout << "The pbc's are {" << columns*sin(3.14/3)*bl*2 << " " << rows*1.42 + rows*2.84 << " " << 6.70*stacks << "}" << endl;
 
 out.close();
 return 0;
