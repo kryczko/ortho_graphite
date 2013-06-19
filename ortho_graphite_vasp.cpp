@@ -34,7 +34,7 @@ out.open(outputfile.c_str());
 
 out << 8*rows*columns*stacks << "\n\n";
 
-double bl = a/sin(PI/3);
+double bl = (a/2)/sin(PI/3);
 
 double x0 = 0.0, x1 = sin(PI/3)*bl;
 
@@ -97,7 +97,7 @@ for (int i = 0; i < stacks; i ++)
 	}
 }
 
-cout << "The pbc's are {" << columns*sin(3.14/3)*bl*2 << " " << rows*1.42 + rows*2.84 << " " << c*stacks << "}" << endl;
+cout << "The pbc's are {" << columns*sin(PI/3)*bl*2 << " " << rows*bl + rows*(2*cos(PI/3)*bl + bl) << " " << c*stacks << "}" << endl;
 
 out.close();
 return 0;

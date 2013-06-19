@@ -24,7 +24,7 @@ cout << "How many columns of carbon atoms would you like: ";
 cin >> columns;
 cout << "How many stacks of carbon sheets would you like: ";
 cin >> stacks;
-cout << "Please enter the \'a\' and \'c\' lattice constants: ";
+cout << "Please enter the \'a\' and \'c\' unit cell lattice constants: ";
 cin >> a >> c;
 cout << "What is the name of the output file (e.g. data.xyz): ";
 cin >> outputfile;
@@ -34,9 +34,8 @@ out.open(outputfile.c_str());
 
 out << 8*rows*columns*stacks << "\n\n";
 
-double bl = a/sin(PI/3);
-
-double x0 = 0.0, x1 = sin(PI/3)*bl;
+double bl = (a/2)/sin(PI/3);
+double x0 = 0.0, x1 = a/2;
 
 double y0 = 0.0, y1 = cos(PI/3)*bl, y2 = bl, y3 = cos(PI/3)*bl + bl, y4 = 2*bl, y5 = cos(PI/3)*bl + 2*bl ;
 
@@ -57,7 +56,7 @@ for (int i = 0; i < stacks; i ++)
 	z0_values[i] = z0;
 	z1_values[i] = z1;
 
-	x0 = 0.0, x1 = sin(PI/3)*bl;
+	x0 = 0.0, x1 = a/2;
 
 	for (int j = 0; j < columns; j ++)
 	{
@@ -97,7 +96,7 @@ for (int i = 0; i < stacks; i ++)
 	}
 }
 
-cout << "The pbc's are {" << columns*sin(3.14/3)*bl*2 << " " << rows*1.42 + rows*2.84 << " " << c*stacks << "}" << endl;
+cout << "The pbc's are {" << columns*sin(PI/3)*bl*2 << " " << rows*bl + rows*(2*cos(PI/3)*bl + bl) << " " << c*stacks << "}" << endl;
 
 out.close();
 return 0;
