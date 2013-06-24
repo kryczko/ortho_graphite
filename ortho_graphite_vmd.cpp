@@ -15,6 +15,7 @@ int main()
 int rows, columns, stacks; // define variables to be used
 string outputfile;
 double a, c;
+char sd, sdx, sdy, sdz;
 //main menu
 
 cout << "\nWelcome to the Graphite Lattice Generator. The coordinates generated will be placed in a file specified by you and can easily be plotted in vmd.\n\n";
@@ -84,14 +85,14 @@ for (int i = 0; i < stacks; i ++)
 			y4_values[k] = y4;
 			y5_values[k] = y5;
 
-			out << setprecision(5) << fixed << "C  " << x0_values[j] << "   " << y0_values[k] << "   " << z0_values[i] << endl;
-			out << "C  " << x0_values[j] << "   " << y0_values[k] << "   " << z1_values[i] << endl;
-			out << "C  " <<  x1_values[j] << "   " << y1_values[k] << "   " << z0_values[i] << endl;
-			out << "C  " << x1_values[j] << "   " << y3_values[k] << "   " << z0_values[i] << endl;
-			out << "C  " << x1_values[j] << "   " << y3_values[k] << "  " << z1_values[i] << endl;
-			out << "C  " << x0_values[j] << "   " << y2_values[k] << "   " << z1_values[i] << endl;
-			out << "C  " <<  x1_values[j] << "   " << y5_values[k] << "   " << z1_values[i] << endl;
-			out << "C  " <<  x0_values[j] << "   " << y4_values[k] << "   " << z0_values[i] << endl;
+			out << setprecision(5) << fixed << "C  " << x0_values[j] << "   " << y0_values[k] << "   " << z0_values[i] << "\tT" << "\tT" << "\tT" << endl;
+			out << "C  " << x0_values[j] << "   " << y0_values[k] << "   " << z1_values[i] << "\tT" << "\tT" << "\tT" << endl;
+			out << "C  " <<  x1_values[j] << "   " << y1_values[k] << "   " << z0_values[i] << "\tT" << "\tT" << "\tT" << endl;
+			out << "C  " << x1_values[j] << "   " << y3_values[k] << "   " << z0_values[i] << "\tT" << "\tT" << "\tT" << endl;
+			out << "C  " << x1_values[j] << "   " << y3_values[k] << "  " << z1_values[i] << "\tT" << "\tT" << "\tT" << endl;
+			out << "C  " << x0_values[j] << "   " << y2_values[k] << "   " << z1_values[i] << "\tT" << "\tT" << "\tT" << endl;
+			out << "C  " <<  x1_values[j] << "   " << y5_values[k] << "   " << z1_values[i] << "\tT" << "\tT" << "\tT" << endl;
+			out << "C  " <<  x0_values[j] << "   " << y4_values[k] << "   " << z0_values[i] << "\tT" << "\tT" << "\tT" << endl;
 		}
 	}
 }
