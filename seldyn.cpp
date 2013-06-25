@@ -47,7 +47,7 @@ for (int i = 0; i < noa; i ++)
 {
         if (xyz[i][2] == a || xyz[i][2] == b)
         {
-                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tF" << "\tF" << "\tF" << endl;
+                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tF" << endl;
         }
         else
         {
@@ -66,7 +66,7 @@ for (int i = 0; i < noa; i ++)
 {
         if (xyz[i][2] == a || xyz[i][2] == b || xyz[i][2] == c || xyz[i][2] == d)
         {
-                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tF" << "\tF" << "\tF" << endl;
+                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tF" << endl;
         }
         else
         {
