@@ -54,6 +54,23 @@ for (int i = 0; i < noa; i ++)
                 output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tT" << endl;
         }
 }
+if (layers == 3)
+{
+
+cout << "What are the z-values for the fixed layers: ";
+cin >> a >> b >> c;
+
+for (int i = 0; i < noa; i ++)
+{
+        if (xyz[i][2] == a || xyz[i][2] == b || xyz[i][2] == c)
+        {
+                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tF" << endl;
+        }
+        else
+        {
+                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tT" << endl;
+        }
+}
 
 }
 if (layers == 4)
