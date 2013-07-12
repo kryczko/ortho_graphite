@@ -47,12 +47,13 @@ for (int i = 0; i < noa; i ++)
 {
         if (xyz[i][2] == a || xyz[i][2] == b)
         {
-                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tF" << endl;
+                output << "  " << xyz[i][0] << "  " << xyz[i][1] << "  " << xyz[i][2] << "  T" << "  T" << "  F" << endl;
         }
         else
         {
-                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tT" << endl;
+                output << "  " << xyz[i][0] << "  " << xyz[i][1] << "  " << xyz[i][2] << "  T" << "  T" << "  T" << endl;
         }
+}
 }
 if (layers == 3)
 {
@@ -64,11 +65,11 @@ for (int i = 0; i < noa; i ++)
 {
         if (xyz[i][2] == a || xyz[i][2] == b || xyz[i][2] == c)
         {
-                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tF" << endl;
+                output << "  " << xyz[i][0] << "  " << xyz[i][1] << "  " << xyz[i][2] << "  T" << "  T" << "  F" << endl;
         }
         else
         {
-                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tT" << endl;
+                output << "  " << xyz[i][0] << "  " << xyz[i][1] << "  " << xyz[i][2] << "  T" << "  T" << "  T" << endl;
         }
 }
 
@@ -83,11 +84,11 @@ for (int i = 0; i < noa; i ++)
 {
         if (xyz[i][2] == a || xyz[i][2] == b || xyz[i][2] == c || xyz[i][2] == d)
         {
-                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tF" << endl;
+                output << "  " << xyz[i][0] << "  " << xyz[i][1] << "  " << xyz[i][2] << "  T" << "  T" << "  F" << endl;
         }
         else
         {
-                output << xyz[i][0] << "\t" << xyz[i][1] << "\t" << xyz[i][2] << "\tT" << "\tT" << "\tT" << endl;
+                output << "  " << xyz[i][0] << "  " << xyz[i][1] << "  " << xyz[i][2] << "  T" << "  T" << "  T" << endl;
         }
 }
 
